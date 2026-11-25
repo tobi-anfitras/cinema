@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CineManager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>CineManager</h1>
+            <p>Seu catálogo de filmes e avaliações</p>
+        </header>
+        <section id="indicadores" class="painel"></section>
+        <section class="card">
+            <h2 id="titulo-form">Novo filme</h2>
+            <form id="form">
+                <input type="hidden" id="id">
+                <label for="titulo">Título</label>
+                <input id="titulo" maxlength="150" required>
+                <label for="ano">Ano</label>
+                <input id="ano" type="number" min="1888" required>
+                <label for="genero">Gênero</label>
+                <select id="genero" required></select>
+                <label for="imagem_url">URL do pôster (opcional)</label>
+                <input id="imagem_url" type="url" maxlength="2048" placeholder="https://exemplo.com/poster.jpg">
+                <small>Use um endereço direto de imagem HTTP ou HTTPS.</small>
+                <div id="preview" class="preview" hidden></div>
+                <div><button>Salvar filme</button>
+                    <button type="button" id="cancelar">Cancelar</button>
+                </div>
+            </form>
+            <p id="mensagem" role="status"></p>
+        </section>
+        <section class="card">
+            <h2>Catálogo</h2>
+            
+            <label for="busca">Buscar filme</label>
+            <input id="busca" placeholder="Digite um título">
+            <div class="acoes-catalogo">
+                <button type="button" id="ordenar-avaliacao">
+                    ⭐ Ordenar por avaliação
+                </button>
+            </div>
+            <div id="lista" class="catalogo"></div>
+
+            
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

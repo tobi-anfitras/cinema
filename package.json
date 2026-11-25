@@ -1,0 +1,27 @@
+{
+  "name": "cinema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "node --env-file=.env --watch server.js"
+},
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobi-anfitras/cinema.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/tobi-anfitras/cinema/issues"
+  },
+  "homepage": "https://github.com/tobi-anfitras/cinema#readme",
+  "dependencies": {
+    "@fastify/static": "^10.1.12",
+    "fastify": "^5.12.8",
+    "pg": "^8.23.1"
+  }
+}
